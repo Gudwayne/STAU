@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        customYellow: '#ffc107',
+                    },
+                },
+            },
+        };
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"
+        integrity="sha512-CNgIRecGo7nphbeZ04Sc13ka07paqdeTu0WR1IM4kNcpmBAUSHSQX0FslNhTDadL4O5SAGapGt4FodqL8My0mA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+        </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" type="image/x-icon" href="media/favicon-stu.png" />
+    <link rel="stylesheet" href="style.css">
+    <title>Welcome - Uploader</title>
+
+    <style>
+        /* For screens that are 600px wide or less */
+        @media (max-width: 1000px) {
+            .hiden{
+                display: flex;
+            }
+            .swiss{
+                display: none;
+            }
+            
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <div class="hiden">
+        <h1>Please access this web application using a desktop or laptop computer!</h1>
+    </div>
+
+    <div class="swiss">
+        <!-- The Header -->
+        <header class="bg-blue-500 p-4 border-b border-blue-950 sticky-header top-0">
+            <div class="max-w-6xl m-auto">
+                <div class="text-xxl text-white flex justify-between items-center">
+                    <span>
+                        <span class="flex text-2xl font-bold text-blue-950 mb-2">
+                            <img src="media/favicon-stu.png" width="60" height="50" alt="">
+                            <h1 class="p-4">Soultracker Uploader</h1>
+                        </span>
+                        <!-- <img src="media/logoST.png" width="200" alt=""> -->
+                        <h1>WELCOME TO 2024, THE YEAR OF REDEMPTION</h1>
+                    </span>
+                    <span
+                        class="flex items-center border border-blue-950 p-1 rounded-lg hover:font-bold hover:text-blue-950">
+                        <a href="#help" class="p-2" data-scroll>Learn How To Use</a>
+                        <i class="fas fa-question-circle text-2xl"></i>
+                    </span>
+                </div>
+            </div>
+        </header>
+
+
+        <!-- The File and Details Entry -->
+        <main class="shadow-md bg-black px-8 pt-6 pb-8 h-screen flex items-center">
+
+            <!-- Cards -->
+            <div class="w-full flex justify-between items-center">
+                <!-- The Excel File Selector -->
+                <div class="w-96 h-72 text-white border border-blue-950 rounded-lg p-4 flex flex-col items-center detail">
+                    <img src="media/exlxs.png" class="m-4" width="50" height="50" alt="">
+                    <h1 class="text-2xl font-bold mb-6">Select the Excel File here</h1>
+                    <input type="file" id="filePicker" class="w-56" accept=".xlsx">
+                    <h1 class="text-2xl font-bold mt-4">Start Position</h1>
+                    <input type="text" class="w-40 h-8 text-black text-center rounded" id="upload_count">
+                </div>
+
+                <!-- The Video -->
+                <div class="w-96 h-72 text-white border border-blue-950 rounded-lg bg-blue-950 p-4">
+                    <h1 class="font-bold mb-4">WINS SOULS IN 2024</h1>
+                    <video controls src="media/win_souls_2024.mp4" class="m-auto rounded"></video>
+                </div>
+
+                <!-- The Details Form -->
+                <div
+                    class="w-96 h-72 text-white shadow-md border border-blue-950 rounded-lg p-4 flex flex-col items-center detail">
+                    <h2 class="text-2xl font-bold mb-6">Enter Login Details</h2>
+                    <form class="m-auto flex flex-col items-center w-full p-4">
+                        <div class="mb-4 w-full">
+                            <input
+                                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                id="username" type="text" placeholder="Username">
+                        </div>
+                        <div class="mb-6 w-full">
+                            <input
+                                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                id="password" type="password" placeholder="Password">
+                        </div>
+                        <a class="bg-blue-950 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                            href="#engine" type="button" data-scroll>
+                            Proceed
+                        </a>
+
+                    </form>
+                </div>
+
+            </div>
+        </main>
+
+        <!-- The Engine Section -->
+        <div id="engine" class="w-full h-screen bg-blue-950 p-4 engine">
+            <div class="flex justify-between text-white font-bold items-center">
+                <span class="flex items-center">
+                    <img src="media/favicon-stu.png" width="30" class="m-2" alt="">
+                    <h1>Hello Brother/Sister</h1>
+                </span>
+                <span class="flex items-center">
+                    <h1 class="text-2xl p-2">The Upload Engine</h1>
+                    <i class="fas fa-cog fa-2x"></i>
+                </span>
+
+                <h1>Number of Souls Uploaded: ###</h1>
+            </div>
+
+            <div class="w-96 m-auto mt-20 flex justify-between ">
+                <button class="bg-green-500 text-white font-bold py-2 px-4 rounded pbtns" type="button">
+                    Start Uploading
+                </button>
+                <button class="bg-red-500 text-white font-bold py-2 px-4 rounded pbtns" type="button">
+                    Stop Uploading
+                </button>
+            </div>
+
+            <!-- Display for output -->
+            <div class="mt-10 bg-white h-96 w-full overflow-y-auto ">
+                <!-- <p class="text-black m-4 p-4 leading-10">
+                    <span class="font-bold">S/N &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Name &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Status</span>  <br>
+                    1. &nbsp;&nbsp;&nbsp; Daniel &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; has been successfully uploaded
+                </p> -->
+
+                <table class="border border-collapse m-auto mt-4 rounded">
+                    <thead>
+                        <tr class="border-b border-blue-950">
+                            <th class="px-4 py-2">S/N</th>
+                            <th class="px-48 py-2">Name</th>
+                            <th class="px-48 py-2">Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="border-b border-blue-950">
+                            <td class="text-center px-4 py-2">1.</td>
+                            <td class="text-center px-4 py-2">Daniel</td>
+                            <td class="text-center px-4 py-2">successfully uploaded</td>
+                        </tr>
+                        <tr class="border-b border-blue-950">
+                            <td class="text-center px-4 py-2">2.</td>
+                            <td class="text-center px-4 py-2">Joy</td>
+                            <td class="text-center px-4 py-2">successfully uploaded</td>
+                        </tr>
+                        <tr class="border-b border-blue-950">
+                            <td class="text-center px-4 py-2">3.</td>
+                            <td class="text-center px-4 py-2">Anita</td>
+                            <td class="text-center px-4 py-2">successfully uploaded</td>
+                        </tr>
+                        <tr class="border-b border-blue-950">
+                            <td class="text-center px-4 py-2">4.</td>
+                            <td class="text-center px-4 py-2">Ayomida</td>
+                            <td class="text-center px-4 py-2">successfully uploaded</td>
+                        </tr>
+                        <tr class="border-b border-blue-950">
+                            <td class="text-center px-4 py-2">5.</td>
+                            <td class="text-center px-4 py-2">John</td>
+                            <td class="text-center px-4 py-2">successfully uploaded</td>
+                        </tr>
+                        <tr class="border-b border-blue-950">
+                            <td class="text-center px-4 py-2">6.</td>
+                            <td class="text-center px-4 py-2">Esther</td>
+                            <td class="text-center px-4 py-2">successfully uploaded</td>
+                        </tr>
+                        <tr class="border-b border-blue-950">
+                            <td class="text-center px-4 py-2">7.</td>
+                            <td class="text-center px-4 py-2">Tony</td>
+                            <td class="text-center px-4 py-2">successfully uploaded</td>
+                        </tr>
+                        <tr class="border-b border-blue-950">
+                            <td class="text-center px-4 py-2">8.</td>
+                            <td class="text-center px-4 py-2">Larry</td>
+                            <td class="text-center px-4 py-2">successfully uploaded</td>
+                        </tr>
+                        <tr class="border-b border-blue-950">
+                            <td class="text-center px-4 py-2">9.</td>
+                            <td class="text-center px-4 py-2">Peter</td>
+                            <td class="text-center px-4 py-2">successfully uploaded</td>
+                        </tr>
+                        <tr class="border-b border-blue-950">
+                            <td class="text-center px-4 py-2">10.</td>
+                            <td class="text-center px-4 py-2">Stella</td>
+                            <td class="text-center px-4 py-2">successfully uploaded</td>
+                        </tr>
+                        <tr class="border-b border-blue-950">
+                            <td class="text-center px-4 py-2">11.</td>
+                            <td class="text-center px-4 py-2">Kelvin</td>
+                            <td class="text-center px-4 py-2">successfully uploaded</td>
+                        </tr>
+                        <tr class="border-b border-blue-950">
+                            <td class="text-center px-4 py-2">12.</td>
+                            <td class="text-center px-4 py-2">Sandra</td>
+                            <td class="text-center px-4 py-2">successfully uploaded</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- The Tutorial Section -->
+        <div id="help" class="w-full h-96 bg-light border-b-2 border-blue-950 p-4 text-blue-950">
+            <h1 class="font-bold m-5 text-4xl text-center">How to Use this Uploader</h1>
+            <p class="m-6 leading-10">
+                <span class="font-bold text-blue-950">Step 1 ></span> Select the Excel file containing list of Souls. The
+                Columns required: [Firstname, Lastname, Gender(M/F), Phone and Email,] <br>
+                <span class="font-bold text-blue-950">Step 2 ></span> Fill in your Soultracker login details in the form and
+                click on Proceed <br>
+                <span class="font-bold text-blue-950">Step 3 ></span> Next it will move to the section below
+
+            </p>
+        </div>
+
+        <div class="w-full h-screen sect"></div>
+
+        <!-- back to top button -->
+        <div id="back-to-top" class="hidden">
+            <i class="fa-solid fas fa-arrow-up"></i>
+        </div>
+
+        <!-- Footer -->
+        <footer class="p-5 text-center bg-light">
+            Soul Tracker Uploader ™ v1.0 Developed with 💙 &copy; 2024
+        </footer>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
+
+<!-- Finishing Touches for later
+    1. Style scroll bar ✅
+    2. Back to top button
+    3. 
+    4. local storage for some variables i.e. [user logins, Excel File name, upload_count ]
+-->
